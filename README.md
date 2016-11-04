@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/matthewglover/functionaljs.svg?branch=master)](https://travis-ci.org/matthewglover/functionaljs) [![Coverage Status](https://coveralls.io/repos/github/matthewglover/functionaljs/badge.svg?branch=compose)](https://coveralls.io/github/matthewglover/functionaljs?branch=compose)
+
 # FunctionalJS
 
 
