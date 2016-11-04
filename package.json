@@ -1,0 +1,35 @@
+{
+  "name": "functionaljs",
+  "version": "1.0.0",
+  "description": "A functional js library to learn about functional programming",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "nyc check-coverage --lines 100, --functions 100, --branches 100",
+    "lint": "eslint './**/*.js'",
+    "precommit": "npm run lint && nyc npm test && npm run coverage",
+    "test": "ava --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewglover/functionaljs.git"
+  },
+  "author": "Matt Glover (https://github.com/matthewglover)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matthewglover/functionaljs/issues"
+  },
+  "homepage": "https://github.com/matthewglover/functionaljs#readme",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-eslint": "^7.1.0",
+    "coveralls": "^2.11.14",
+    "eslint": "^3.9.0",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "husky": "^0.11.9",
+    "nyc": "^8.3.2",
+    "sinon": "^1.17.6"
+  }
+}
