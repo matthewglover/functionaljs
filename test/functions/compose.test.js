@@ -1,5 +1,5 @@
 import test from 'ava';
-import { compose } from '../src/functions';
+import { compose } from '../../src/functions';
 
 const add = a => b => a + b;
 const mult = a => b => a * b;
