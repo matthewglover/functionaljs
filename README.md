@@ -17,4 +17,6 @@ Using ES6 and AVA for testing.
 
 ## Features:
 
-- `compose:: (f -> g, ..., a -> b) -> a -> g`
+- `compose :: (f -> g, ..., a -> b) -> a -> g`
+- `curry :: ((a, b, ..., f) => g) => a => b => ... f => g`
+- `handleError :: (e -> c) -> (a -> b) -> a -> (b | c)`
