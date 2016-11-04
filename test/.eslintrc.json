@@ -5,6 +5,7 @@
     "node": true
   },
   "rules": {
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "max-len": 0
   }
 }

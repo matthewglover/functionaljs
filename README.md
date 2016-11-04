@@ -17,6 +17,23 @@ Using ES6 and AVA for testing.
 
 ## Features:
 
+
+### Functions
+
 - `compose :: (f -> g, ..., a -> b) -> a -> g`
 - `curry :: ((a, b, ..., f) => g) => a => b => ... f => g`
 - `handleError :: (e -> c) -> (a -> b) -> a -> (b | c)`
+- `identity :: a -> a`
+- `once :: (a... -> b) -> (a... -> b)`
+
+### Data
+
+#### Future
+
+##### Static m
+
+##### Instance methods
+- `Future::fork - Future e a ~> (e -> (), a -> ()) -> ()`
+- `Future::map - Future e a ~> (a -> b) -> Future e b`
+- `Future::chain - Future e a ~> (a -> Future b) -> Future e b`
+- `Future::ap - Future e (a -> b) ~> Future e a -> Future e b`

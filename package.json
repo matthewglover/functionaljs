@@ -7,6 +7,7 @@
     "coverage": "nyc check-coverage --lines 100, --functions 100, --branches 100",
     "lint": "eslint './**/*.js'",
     "precommit": "npm run lint && nyc npm test && npm run coverage",
+    "report": "nyc report --reporter=lcov",
     "test": "ava --verbose"
   },
   "repository": {
