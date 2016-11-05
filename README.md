@@ -22,6 +22,7 @@ Using ES6 and AVA for testing.
 
 - `compose :: (f -> g, ..., a -> b) -> a -> g`
 - `curry :: ((a, b, ..., f) => g) => a => b => ... f => g`
+- `equals :: a -> b -> Boolean`
 - `handleError :: (e -> c) -> (a -> b) -> a -> (b | c)`
 - `identity :: a -> a`
 - `once :: (a... -> b) -> (a... -> b)`
