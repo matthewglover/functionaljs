@@ -212,16 +212,14 @@ test.cb('Future::ap - (Future e (a -> b -> [a, b])).ap(Future e a).ap(Future e b
   const fb = new Future(resolvingAsync(10, 20, bTimer));
   const fc = new Future(resolvingAsync(20, 20, cTimer));
   const fd = fa.ap(fb).ap(fc);
-  t.plan(7);
+  t.plan(6);
   t.true(fd instanceof Future);
-  const startTime = Date.now();
   fd.fork(identity, (x) => {
     t.true(bTimer.calledTwice);
     t.true(cTimer.calledTwice);
     t.true(cTimer.lastCall.args[0] > bTimer.firstCall.args[0]);
     t.true(bTimer.lastCall.args[0] > cTimer.firstCall.args[0]);
     t.deepEqual(x, [10, 20]);
-    t.true(Date.now() - startTime < 40);
     t.end();
   });
 });
