@@ -1,4 +1,5 @@
 const apply = require('./apply');
+const chain = require('./chain');
 const compose = require('./compose');
 const curry = require('./curry');
 const equals = require('./equals');
@@ -15,6 +16,7 @@ const zip = require('./zip');
 
 module.exports = {
   apply,
+  chain,
   compose,
   curry,
   equals,

@@ -21,6 +21,7 @@ Using ES6 and AVA for testing.
 ### Functions
 
 - `apply :: (a... -> b) -> [a...] -> b`
+- `chain :: (a -> M b) -> M a -> M b`
 - `compose :: (f -> g, ..., a -> b) -> a -> g`
 - `curry :: ((a, b, ..., f) => g) => a => b => ... f => g`
 - `equals :: a -> b -> Boolean`
