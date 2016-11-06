@@ -1,4 +1,4 @@
-/* eslint-disable no-underscore-dangle, new-cap */
+/* eslint-disable no-underscore-dangle */
 import test from 'ava';
 import { Maybe, Just, Nothing } from '../../src/data';
 import { compose } from '../../src/functions';
