@@ -67,6 +67,8 @@ Using ES6 and AVA for testing.
 - `Either::ap - Either a (b -> c) ~> Either b -> Either a c`
 - `Either::chain - Either a b ~> (b -> Either a c) -> Either a c`
 - `Either::map - Either a b ~> (b -> c) -> Either a c`
+- `Either::isLeft - Either a b ~> () -> Boolean`
+- `Either::isRight - Either a b ~> () -> Boolean`
 
 
 #### Future
