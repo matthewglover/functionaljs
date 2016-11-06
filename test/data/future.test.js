@@ -1,10 +1,14 @@
 import test from 'ava';
+import sinon from 'sinon';
 import { identity } from '../../src/functions';
 import { Future } from '../../src/data';
 
+const noop = () => {};
 
-const resolvingAsync = (v, delay = 1) => ((reject, resolve) => {
+const resolvingAsync = (v, delay = 1, spy = noop) => ((reject, resolve) => {
+  spy(Date.now());
   setTimeout(() => {
+    spy(Date.now());
     resolve(v);
   }, delay);
 });
@@ -203,13 +207,19 @@ test.cb('Future::ap - (Future e (a -> b)).ap(Future e a) -> Future e b (Future e
 
 test.cb('Future::ap - (Future e (a -> b -> [a, b])).ap(Future e a).ap(Future e b) -> Future e [a, b], resolves in parallel (parallelism)', (t) => {
   const fa = Future.of(a => b => [a, b]);
-  const fb = new Future(resolvingAsync(10, 20));
-  const fc = new Future(resolvingAsync(20, 20));
+  const bTimer = sinon.spy();
+  const cTimer = sinon.spy();
+  const fb = new Future(resolvingAsync(10, 20, bTimer));
+  const fc = new Future(resolvingAsync(20, 20, cTimer));
   const fd = fa.ap(fb).ap(fc);
-  t.plan(3);
+  t.plan(7);
   t.true(fd instanceof Future);
   const startTime = Date.now();
   fd.fork(identity, (x) => {
+    t.true(bTimer.calledTwice);
+    t.true(cTimer.calledTwice);
+    t.true(cTimer.lastCall.args[0] > bTimer.firstCall.args[0]);
+    t.true(bTimer.lastCall.args[0] > cTimer.firstCall.args[0]);
     t.deepEqual(x, [10, 20]);
     t.true(Date.now() - startTime < 40);
     t.end();
