@@ -5,6 +5,7 @@
   },
   "rules": {
     "import/prefer-default-export": "off",
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "new-cap": 0
   }
 }

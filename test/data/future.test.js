@@ -5,7 +5,6 @@ import { Future } from '../../src/data';
 
 const resolvingAsync = (v, delay = 1) => ((reject, resolve) => {
   setTimeout(() => {
-    // console.log('Resolving', v, Date.now());
     resolve(v);
   }, delay);
 });
