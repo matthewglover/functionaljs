@@ -6,6 +6,14 @@ class Either {
   constructor(v) {
     this.__value = v;
   }
+
+  isLeft() {
+    return this instanceof Left;
+  }
+
+  isRight() {
+    return this instanceof Right;
+  }
 }
 
 Either.Right = x => Right.of(x);
