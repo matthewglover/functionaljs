@@ -45,14 +45,14 @@ test('Maybe::isJust - Maybe a ~> () -> boolean: Nothing returns false', (t) => {
   t.false(Maybe.of(null).isJust());
 });
 
-test('Maybe::equals - Maybe a ~> any -> boolean - Just', (t) => {
+test('Maybe::equals - Maybe a ~> Maybe b -> boolean - Just', (t) => {
   const m = Maybe.of(10);
   t.true(m.equals(Maybe.of(10)));
   t.false(m.equals(Maybe.of(2)));
   t.false(m.equals(Maybe.of(null)));
 });
 
-test('Maybe::equals - Maybe a ~> any -> boolean - Nothing', (t) => {
+test('Maybe::equals - Maybe a ~> Maybe b -> boolean - Nothing', (t) => {
   const m = Maybe.of(null);
   t.true(m.equals(Maybe.of(null)));
   t.true(m.equals(Maybe.of(undefined)));

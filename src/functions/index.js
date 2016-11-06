@@ -6,6 +6,7 @@ const every = require('./every');
 const handleError = require('./handle_error');
 const identity = require('./identity');
 const keys = require('./keys');
+const map = require('./map');
 const once = require('./once');
 const toPairs = require('./to_pairs');
 const typeOf = require('./type_of');
@@ -21,6 +22,7 @@ module.exports = {
   handleError,
   identity,
   keys,
+  map,
   once,
   toPairs,
   typeOf,
