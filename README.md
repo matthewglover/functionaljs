@@ -20,6 +20,7 @@ Using ES6 and AVA for testing.
 
 ### Functions
 
+- `ap :: Functor (a -> b) -> Functor a -> Functor b`
 - `apply :: (a... -> b) -> [a...] -> b`
 - `chain :: (a -> M b) -> M a -> M b`
 - `compose :: (f -> g, ..., a -> b) -> a -> g`
@@ -29,6 +30,7 @@ Using ES6 and AVA for testing.
 - `every :: (a -> Boolean) -> [a] -> Boolean`
 - `handleError :: (e -> c) -> (a -> b) -> a -> (b | c)`
 - `identity :: a -> a`
+- `liftA2 :: (a -> b -> c) -> Functor a -> Functor b -> Functor c`
 - `keys :: {String: *} -> [String]`
 - `map :: (a -> b) -> F a -> F b`
 - `maybe :: b -> (a -> b) -> Maybe a -> b`
