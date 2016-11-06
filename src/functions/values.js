@@ -1,7 +1,8 @@
 const keys = require('./keys');
+const map = require('./map');
 
 // values :: {String: *} -> [*]
 const values = o =>
-  keys(o).map(k => o[k]);
+  map(k => o[k], keys(o));
 
 module.exports = values;

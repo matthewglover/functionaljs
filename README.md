@@ -20,18 +20,62 @@ Using ES6 and AVA for testing.
 
 ### Functions
 
+- `apply :: (a... -> b) -> [a...] -> b`
+- `chain :: (a -> M b) -> M a -> M b`
 - `compose :: (f -> g, ..., a -> b) -> a -> g`
 - `curry :: ((a, b, ..., f) => g) => a => b => ... f => g`
+- `either :: (a -> c) -> (b -> c) -> Either a b -> c`
 - `equals :: a -> b -> Boolean`
+- `every :: (a -> Boolean) -> [a] -> Boolean`
 - `handleError :: (e -> c) -> (a -> b) -> a -> (b | c)`
 - `identity :: a -> a`
+- `keys :: {String: *} -> [String]`
+- `map :: (a -> b) -> F a -> F b`
+- `maybe :: b -> (a -> b) -> Maybe a -> b`
 - `once :: (a... -> b) -> (a... -> b)`
+- `toPairs :: {String: *} -> [[String, *]]`
+- `typeOf :: * -> String`
+- `values :: {String: *} -> [*]`
+- `zip :: {String: *} -> [[String, *]]`
 
 ### Data
 
+#### Maybe
+
+##### Static methods
+- `Maybe.of - a -> Just a`
+- `Maybe.Nothing - () -> Nothing`
+
+##### Instance methods
+
+- `Maybe::ap - Maybe (a -> b) ~> Maybe a -> Maybe b`
+- `Maybe::chain - Maybe a ~> (a -> Maybe b) -> Maybe b`
+- `Maybe::equals - Maybe a ~> (Maybe b) -> Boolean`
+- `Maybe::isJust - Maybe a ~> () -> Boolean`
+- `Maybe::isNothing - Maybe a ~> () -> Boolean`
+- `Maybe::map - Maybe a ~> (a -> b) -> Maybe b`
+
+
+#### Either
+
+##### Static methods
+- `Either.of - b -> Right b`
+- `Either.Left - a -> Left a`
+
+##### Instance methods
+
+- `Either::ap - Either a (b -> c) ~> Either b -> Either a c`
+- `Either::chain - Either a b ~> (b -> Either a c) -> Either a c`
+- `Either::map - Either a b ~> (b -> c) -> Either a c`
+- `Either::isLeft - Either a b ~> () -> Boolean`
+- `Either::isRight - Either a b ~> () -> Boolean`
+
+
 #### Future
 
-##### Static m
+##### Static methods
+- `Future.of - a -> Future e a`
+- `Future.reject - e -> Future e`
 
 ##### Instance methods
 - `Future::fork - Future e a ~> (e -> (), a -> ()) -> ()`

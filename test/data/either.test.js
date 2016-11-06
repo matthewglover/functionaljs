@@ -80,3 +80,13 @@ test('Either::ap - Either a (b -> c) ~> Either a b -> Either a c - (Right (b -> 
   t.true(ec instanceof Left);
   t.is(ec.__value, testError);
 });
+
+test('Either::isLeft - Either a b ~> () -> Boolean', (t) => {
+  t.false(Either.of(1).isLeft());
+  t.true(Either.Left(testError).isLeft());
+});
+
+test('Either::isRight - Either a b ~> () -> Boolean', (t) => {
+  t.true(Either.of(1).isRight());
+  t.false(Either.Left(testError).isRight());
+});
