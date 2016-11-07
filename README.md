@@ -25,7 +25,7 @@ Using ES6 and AVA for testing.
 - `chain :: (a -> M b) -> M a -> M b`
 - `compose :: (f -> g, ..., a -> b) -> a -> g`
 - `curry :: ((a, b, ..., f) => g) => a => b => ... f => g`
-- `curryN :: ((a, b, ..., f) => g, n) => a => b => ... f => g`
+- `curryN :: ((a, b, ..., f) => g, n) => a => b => ... f => g` (up to arity of 5 - then uses curry)
 - `either :: (a -> c) -> (b -> c) -> Either a b -> c`
 - `equals :: a -> b -> Boolean`
 - `every :: (a -> Boolean) -> [a] -> Boolean`
