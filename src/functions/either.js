@@ -1,8 +1,8 @@
-const curryN = require('./curryN');
+const curry = require('./curry');
 
 
 // either :: (a -> c) -> (b -> c) -> Either a b -> c
-const either = curryN(3, (f, g, ab) =>
+const either = curry((f, g, ab) =>
   (ab.isLeft()
     ? f(ab.__value)
     : g(ab.__value)));

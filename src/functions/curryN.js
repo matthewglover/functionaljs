@@ -1,4 +1,7 @@
-const curry = require('./curry');
+const __curry = require('./__curry');
+const identity = require('./identity');
+
+const curry0 = identity;
 
 const curry1 = f => function inner(a) {
   return (arguments.length >= 1
@@ -52,12 +55,13 @@ const curry6 = f => function inner(a, b, c, d, e, g) {
     case 2: return curry4((cc, dd, ee, gg) => f(a, b, cc, dd, ee, gg));
     case 3: return curry3((dd, ee, gg) => f(a, b, c, dd, ee, gg));
     case 4: return curry2((ee, gg) => f(a, b, c, d, ee, gg));
-    case 5: return curry1(ff => f(a, b, c, d, e, ff));
+    case 5: return curry1(gg => f(a, b, c, d, e, gg));
     default: return f(a, b, c, d, e, g);
   }
 };
 
 const curryFns = {
+  curry0,
   curry1,
   curry2,
   curry3,
@@ -69,6 +73,6 @@ const curryFns = {
 const curryN = (n, f) =>
   (n <= 6
     ? curryFns[`curry${n}`](f)
-    : curry(f));
+    : __curry(f));
 
 module.exports = curryN;

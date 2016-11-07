@@ -1,8 +1,10 @@
+const __curry = require('./__curry');
+const curryN = require('./curryN');
 
-// curry :: ((a, b, ..., f) => g) => a => b => ... f => g
-const curry = (f, ...args) =>
-  (args.length >= f.length
-    ? f(...args)
-    : (...moreArgs) => curry(f, ...args.concat(moreArgs)));
+
+const curry = f =>
+  (f.length <= 6
+    ? curryN(f.length, f)
+    : __curry(f));
 
 module.exports = curry;

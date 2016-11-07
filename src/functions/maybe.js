@@ -1,8 +1,8 @@
-const curryN = require('./curryN');
+const curry = require('./curry');
 
 
 // maybe :: b -> (a -> b) -> Maybe a -> b
-const map = curryN(3, (b, f, ma) =>
+const map = curry((b, f, ma) =>
   (ma.isNothing()
     ? b
     : f(ma.__value)));
