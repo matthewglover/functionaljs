@@ -9,5 +9,13 @@ test('flip :: (a, ... b -> c) -> (b..., a -> c)', (t) => {
 });
 
 test('flip :: (a, ... b -> c) -> (b..., a -> c)', (t) => {
+  t.is(flip(divide)(2)(3), 3 / 2);
+});
+
+test('flip :: (a, ... b -> c) -> (b..., a -> c)', (t) => {
   t.is(flip(divide3)(2, 3, 4), 4 / 3 / 2);
+});
+
+test('flip :: (a, ... b -> c) -> (b..., a -> c)', (t) => {
+  t.is(flip(divide3)(2, 3)(4), 4 / 3 / 2);
 });
