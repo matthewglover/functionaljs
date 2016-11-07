@@ -1,7 +1,7 @@
-const curry = require('./curry');
+const curryN = require('./curryN');
 
 
 // apply :: (a... -> b) -> [a...] -> b
-const apply = curry((f, args) => f(...args));
+const apply = curryN(2, (f, args) => f(...args));
 
 module.exports = apply;

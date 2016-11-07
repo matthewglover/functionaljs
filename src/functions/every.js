@@ -1,7 +1,7 @@
-const curry = require('./curry');
+const curryN = require('./curryN');
 
 
 // every :: (a -> Boolean) -> [a] -> Boolean
-const every = curry((predicate, array) => array.every(predicate));
+const every = curryN(2, (predicate, array) => array.every(predicate));
 
 module.exports = every;

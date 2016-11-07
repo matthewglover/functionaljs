@@ -1,5 +1,5 @@
 /* eslint-disable no-use-before-define */
-const curry = require('./curry');
+const curryN = require('./curryN');
 const zip = require('./zip');
 const typeOf = require('./type_of');
 const apply = require('./apply');
@@ -24,7 +24,7 @@ const objectEquals = (ao, bo) => {
 };
 
 // equals :: a -> b -> Boolean
-const equals = curry((a, b) => {
+const equals = curryN(2, (a, b) => {
   if (typeOf(a) !== typeOf(b)) return false;
   if (typeOf(a) === 'array') return arrayEquals(a, b);
   if (typeOf(a) === 'object') return objectEquals(a, b);
