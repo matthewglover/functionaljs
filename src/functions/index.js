@@ -13,6 +13,8 @@ const identity = require('./identity');
 const keys = require('./keys');
 const liftA2 = require('./lift_a2');
 const liftA3 = require('./lift_a3');
+const liftA4 = require('./lift_a4');
+const liftA5 = require('./lift_a5');
 const map = require('./map');
 const maybe = require('./maybe');
 const once = require('./once');
@@ -37,6 +39,8 @@ module.exports = {
   keys,
   liftA2,
   liftA3,
+  liftA4,
+  liftA5,
   map,
   maybe,
   once,

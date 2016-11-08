@@ -13,7 +13,7 @@ There are great libraries like Ramda and Folktale, but it's good to understand w
 
 ## How
 
-Using ES6 and AVA for testing.
+Using ES6 and Tape for testing.
 
 ## Features:
 
@@ -34,7 +34,9 @@ Using ES6 and AVA for testing.
 - `identity :: a -> a`
 - `keys :: {String: *} -> [String]`
 - `liftA2 :: (a -> b -> c) -> Functor a -> Functor b -> Functor c`
-- `liftA3 :: (a -> b -> c -> d) -> Functor a -> Functor b -> Functor c`
+- `liftA3 :: (a -> b -> c -> d) -> Functor a -> Functor b -> Functor c -> Functor d`
+- `liftA4 :: (a -> b -> c -> d -> e) -> Functor a -> Functor b -> Functor c -> Functor d -> Functor e`
+- `liftA5 :: (a -> b -> c -> d -> e -> f) -> Functor a -> Functor b -> Functor c -> Functor d -> Functor e -> Functor f`
 - `map :: (a -> b) -> F a -> F b`
 - `maybe :: b -> (a -> b) -> Maybe a -> b`
 - `once :: (a... -> b) -> (a... -> b)`
