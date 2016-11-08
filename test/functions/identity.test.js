@@ -1,8 +1,9 @@
-import test from 'ava';
-import { identity } from '../../src/functions';
+const test = require('tape');
+const { identity } = require('../../src/functions');
 
 
 test('identity :: x -> x', (t) => {
   const o = {};
-  t.is(identity(o), o);
+  t.equal(identity(o), o);
+  t.end();
 });

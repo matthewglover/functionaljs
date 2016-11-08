@@ -8,7 +8,8 @@
     "lint": "eslint './**/*.js'",
     "precommit": "npm run lint && nyc npm test && npm run coverage",
     "report": "nyc report --reporter=lcov",
-    "test": "ava --verbose"
+    "test": "tape './test/**/*.js' | tap-spec",
+    "watch": "nodemon -q -x 'npm test'"
   },
   "repository": {
     "type": "git",
@@ -21,16 +22,17 @@
   },
   "homepage": "https://github.com/matthewglover/functionaljs#readme",
   "devDependencies": {
-    "ava": "^0.16.0",
     "babel-eslint": "^7.1.0",
     "coveralls": "^2.11.14",
     "eslint": "^3.9.0",
     "eslint-config-airbnb": "^12.0.0",
-    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-import": "^2.1.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
     "husky": "^0.11.9",
     "nyc": "^8.3.2",
-    "sinon": "^1.17.6"
+    "sinon": "^1.17.6",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.2"
   }
 }
