@@ -1,5 +1,5 @@
-import test from 'ava';
-import { every } from '../../src/functions';
+const test = require('tape');
+const { every } = require('../../src/functions');
 
 const isEven = x => x % 2 === 0;
 const evenNos = [2, 4, 6, 8, 12, 16];

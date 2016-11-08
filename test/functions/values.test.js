@@ -1,5 +1,5 @@
-import test from 'ava';
-import { values } from '../../src/functions';
+const test = require('tape');
+const { values } = require('../../src/functions');
 
 const o = {
   a: 1,
@@ -22,4 +22,5 @@ test('values :: {String: *} -> [*]', (t) => {
       false,
       null,
     ]);
+  t.end();
 });

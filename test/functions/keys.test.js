@@ -1,5 +1,5 @@
-import test from 'ava';
-import { keys } from '../../src/functions';
+const test = require('tape');
+const { keys } = require('../../src/functions');
 
 const o = {
   a: 1,
@@ -16,4 +16,5 @@ test('keys :: {String: *} -> [String]', (t) => {
   t.deepEqual(
     keys(o).sort(),
     ['a', 'b', 'c', 'd', 'e', 'f', '1'].sort());
+  t.end();
 });
