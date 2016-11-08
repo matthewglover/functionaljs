@@ -13,7 +13,7 @@ There are great libraries like Ramda and Folktale, but it's good to understand w
 
 ## How
 
-Using ES6 and AVA for testing.
+Using ES6 and Tape for testing.
 
 ## Features:
 
