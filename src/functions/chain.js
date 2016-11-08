@@ -1,6 +1,6 @@
-const curryN = require('./curryN');
+const curry = require('./curry');
 
 // chain :: (a -> M b) -> M a -> M b
-const chain = curryN(2, (f, M) => M.chain(f));
+const chain = curry((f, M) => M.chain(f));
 
 module.exports = chain;

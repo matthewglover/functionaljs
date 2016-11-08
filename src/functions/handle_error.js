@@ -1,7 +1,7 @@
-const curryN = require('./curryN');
+const curry = require('./curry');
 
 // handleError :: (e -> c) -> (a -> b) -> a -> (b | c)
-const handleError = curryN(3, (errorHandler, f, x) => {
+const handleError = curry((errorHandler, f, x) => {
   try {
     return f(x);
   } catch (error) {

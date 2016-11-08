@@ -1,7 +1,7 @@
-const curryN = require('./curryN');
+const curry = require('./curry');
 
 
 // map :: (a -> b) -> F a -> F b
-const map = curryN(2, (f, F) => F.map(f));
+const map = curry((f, F) => F.map(f));
 
 module.exports = map;
