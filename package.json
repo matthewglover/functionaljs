@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/matthewglover/functionaljs#readme",
   "devDependencies": {
-    "ava": "^0.16.0",
     "babel-eslint": "^7.1.0",
     "coveralls": "^2.11.14",
     "eslint": "^3.9.0",
