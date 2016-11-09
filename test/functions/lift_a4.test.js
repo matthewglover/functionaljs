@@ -12,7 +12,7 @@ test('liftA4 :: (a -> b -> c -> d -> e) -> Functor a -> Functor b -> Functor c -
 });
 
 test('liftA4 :: (a -> b -> c -> d -> e) -> Functor a -> Functor b -> Functor c -> Functor d -> Functor e', (t) => {
-  t.true(liftA4(add, Maybe.Nothing(), Maybe.of(3), Maybe.of(5), Maybe.of(6)).isNothing());
+  t.true(liftA4(add, Maybe.Nothing, Maybe.of(3), Maybe.of(5), Maybe.of(6)).isNothing());
   t.end();
 });
 

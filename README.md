@@ -49,9 +49,9 @@ Using ES6 and Tape for testing.
 
 #### Maybe
 
-##### Static methods
+##### Static methods / properties
 - `Maybe.of - a -> Just a`
-- `Maybe.Nothing - () -> Nothing`
+- `Maybe.Nothing -> Nothing`
 
 ##### Instance methods
 

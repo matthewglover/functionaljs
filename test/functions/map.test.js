@@ -18,7 +18,7 @@ test('map :: (a -> b) -> F a -> F b', (t) => {
 });
 
 test('map :: (a -> b) -> F a -> F b', (t) => {
-  t.true(mapDouble(Maybe.Nothing()).isNothing());
+  t.true(mapDouble(Maybe.Nothing).isNothing());
   t.end();
 });
 

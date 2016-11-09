@@ -12,13 +12,6 @@ class Maybe {
   }
 }
 
-Maybe.of = x =>
-  (x === null || x === undefined
-    ? aNothing
-    : new Just(x));
-
-Maybe.Nothing = () => aNothing;
-
 class Just extends Maybe {
 
   constructor(v) {
@@ -62,8 +55,12 @@ class Nothing extends Maybe {
   }
 }
 
-const aNothing = new Nothing();
+Maybe.of = x =>
+  (x === null || x === undefined
+    ? Maybe.Nothing
+    : new Just(x));
 
+Maybe.Nothing = new Nothing();
 
 module.exports = {
   Maybe,

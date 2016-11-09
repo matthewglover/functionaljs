@@ -11,6 +11,6 @@ test('maybe :: b -> (a -> b) -> Maybe a -> b', (t) => {
 });
 
 test('maybe :: b -> (a -> b) -> Maybe a -> b', (t) => {
-  t.equal(doubleOrZero(Maybe.Nothing()), 0);
+  t.equal(doubleOrZero(Maybe.Nothing), 0);
   t.end();
 });

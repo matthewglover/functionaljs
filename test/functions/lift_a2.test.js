@@ -12,7 +12,7 @@ test('liftA2 :: (a -> b -> c) -> F a -> F b -> F c', (t) => {
 });
 
 test('liftA2 :: (a -> b -> c) -> F a -> F b -> F c', (t) => {
-  t.true(liftA2(add, Maybe.Nothing(), Maybe.of(3)).isNothing());
+  t.true(liftA2(add, Maybe.Nothing, Maybe.of(3)).isNothing());
   t.end();
 });
 

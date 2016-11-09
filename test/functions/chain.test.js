@@ -13,7 +13,7 @@ test('chain :: (a -> M b) -> M a -> M b', (t) => {
 });
 
 test('chain :: (a -> M b) -> M a -> M b', (t) => {
-  t.true(chain(compose(Maybe.of, double), Maybe.Nothing()).isNothing());
+  t.true(chain(compose(Maybe.of, double), Maybe.Nothing).isNothing());
   t.end();
 });
 
