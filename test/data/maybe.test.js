@@ -27,7 +27,7 @@ test('Maybe.of - undefined returns instance of Maybe and Nothing', (t) => {
 });
 
 test('Maybe.Nothing - returns instance of Maybe and Nothing', (t) => {
-  const m = Maybe.Nothing();
+  const m = Maybe.Nothing;
   t.true(m instanceof Maybe);
   t.true(m instanceof Nothing);
   t.end();
