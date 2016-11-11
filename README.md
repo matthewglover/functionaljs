@@ -41,6 +41,7 @@ Using ES6 and Tape for testing.
 - `maybe :: b -> (a -> b) -> Maybe a -> b`
 - `once :: (a... -> b) -> (a... -> b)`
 - `toPairs :: {String: *} -> [[String, *]]`
+- `trampoline :: (*... -> a) -> (*... -> a) - only works where final value is not a function`
 - `typeOf :: * -> String`
 - `values :: {String: *} -> [*]`
 - `zip :: {String: *} -> [[String, *]]`

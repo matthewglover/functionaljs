@@ -19,6 +19,7 @@ const map = require('./map');
 const maybe = require('./maybe');
 const once = require('./once');
 const toPairs = require('./to_pairs');
+const trampoline = require('./trampoline');
 const typeOf = require('./type_of');
 const values = require('./values');
 const zip = require('./zip');
@@ -45,6 +46,7 @@ module.exports = {
   maybe,
   once,
   toPairs,
+  trampoline,
   typeOf,
   values,
   zip,
