@@ -41,7 +41,7 @@ Using ES6 and Tape for testing.
 - `maybe :: b -> (a -> b) -> Maybe a -> b`
 - `once :: (a... -> b) -> (a... -> b)`
 - `toPairs :: {String: *} -> [[String, *]]`
-- `trampoline :: (*... -> a) -> (*... -> a) - only works where final value is not a function`
+- `trampoline :: (*... -> a) -> (*... -> a) - requires recursive call to be wrapped in a thunk trampoline.Thunk(() => [return value])`
 - `typeOf :: * -> String`
 - `values :: {String: *} -> [*]`
 - `zip :: {String: *} -> [[String, *]]`
