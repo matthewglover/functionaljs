@@ -90,3 +90,8 @@ Using ES6 and Tape for testing.
 - `Future::map - Future e a ~> (a -> b) -> Future e b`
 - `Future::chain - Future e a ~> (a -> Future b) -> Future e b`
 - `Future::ap - Future e (a -> b) ~> Future e a -> Future e b`
+
+### Todo
+
+- Lenses
+- Transducers
