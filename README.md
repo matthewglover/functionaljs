@@ -95,3 +95,5 @@ Using ES6 and Tape for testing.
 
 - Lenses
 - Transducers
+- Linked List
+- Binary Trie
