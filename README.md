@@ -97,3 +97,4 @@ Using ES6 and Tape for testing.
 - Transducers
 - Linked List
 - Binary Trie
+- other
